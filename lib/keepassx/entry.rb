@@ -74,6 +74,10 @@ module Keepassx
       @fields.detect { |field| field.name == 'groupid' }.data
     end
 
+    def url
+      @fields.detect { |field| field.name == 'url' }.data.strip
+    end
+
     def inspect
       "Entry<title=#{title.inspect}, username=[FILTERED], password=[FILTERED], notes=#{notes.inspect}>"
     end
